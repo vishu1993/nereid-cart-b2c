@@ -259,12 +259,12 @@ class BaseTestCase(NereidTestCase):
             'currencies': [('add', [self.usd.id])],
         }])
 
-    def create_static_file(self, file_buffer, folder_name):
+    def create_static_file(self, file_buffer, name):
         """
         Creates the static file for testing
         """
         folder, = self.StaticFolder.create([{
-            'folder_name': folder_name,
+            'name': name,
             'description': 'Test Folder'
         }])
 
